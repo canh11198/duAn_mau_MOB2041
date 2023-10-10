@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragment.DoanhThu_Fragment"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Doanh Thu"
+        android:textSize="40sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#99CCFF"
+            android:text="Từ ngày"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:textSize="23dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edtStar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="ngày/tháng/năm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#99CCFF"
+            android:text="Đến ngày"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edtEnd"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="ngày/tháng/năm" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnThongke"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#99CCFF"
+        android:text="Thống kê"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Doanh thu: "
+            android:textStyle="bold"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/txtKetqua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#D81C0E"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

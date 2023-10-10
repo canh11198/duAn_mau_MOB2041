@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".man_hinh_chao"
+    android:orientation="vertical"
+    android:layout_margin="20sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chào Mừng đến với thư viện PNLib "
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="20sp"/>
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:background="@drawable/img"
+        android:layout_gravity="center"
+        android:layout_marginTop="25sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phạm Tân Cảnh "
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="40sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PH44323"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="40sp"/>
+</LinearLayout>

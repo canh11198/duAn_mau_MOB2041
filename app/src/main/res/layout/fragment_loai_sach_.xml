@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.LoaiSach_Fragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THÊM LOẠI SÁCH MỚI"
+        android:textColor="#2196F3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên sách mới"
+        android:id="@+id/edtloaisach"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="THÊM"
+            android:backgroundTint="#2196F3"
+            android:id="@+id/btnThem"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:backgroundTint="#2196F3"
+            android:text="Sửa"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnSua"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH LOẠI SÁCH"
+        android:textColor="#FFC107"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerLoaisach"
+        />
+
+</LinearLayout>

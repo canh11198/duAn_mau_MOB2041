@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FFEB3B"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã sách: "
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên sách: "
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giá thuê: "
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã loại: "
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên loại: "
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtmasach"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="1: "
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txttensach"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Java2"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtgiathue"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="20000 "
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/txtmaLoai"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="... "
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/txtTenLoai"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="... "
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete" />
+            <ImageView
+                android:id="@+id/imgedit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

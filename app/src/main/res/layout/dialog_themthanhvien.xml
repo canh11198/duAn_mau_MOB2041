@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="#F1E57B"
+    android:layout_height="wrap_content">
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THÊM THÀNH VIÊN MỚI"
+        android:textStyle="bold"
+        android:textColor="#D81414"
+        android:textSize="25dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edthoTen"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        android:hint="Nhập họ tên"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtnamSinh"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        android:hint="Nhập năm sinh"
+        />
+
+
+</LinearLayout>

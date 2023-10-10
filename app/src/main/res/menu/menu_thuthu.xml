@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <item android:id="@+id/nav_PhieuMuon"
+        android:icon="@drawable/home"
+        android:title="Quản lý phiếu mượn"/>
+    <item android:id="@+id/nav_LoaiSach"
+        android:icon="@drawable/book"
+        android:title="Quản lý loại sách"/>
+    <item android:id="@+id/nav_Sach"
+        android:icon="@drawable/book_icon"
+        android:title="Quản lý sách"/>
+    <item android:id="@+id/nav_ThanhVien"
+        android:icon="@drawable/audience"
+        android:title="Quản lý thành viên"/>
+    <group android:checkableBehavior="single">
+        <item android:title="Thống kê">
+            <menu>
+                <item android:id="@+id/nav_TopMuon"
+                    android:icon="@drawable/badge"
+                    android:title="Top sách mượn nhiều nhất"/>
+                <item android:id="@+id/nav_DoanhThu"
+                    android:icon="@drawable/money"
+                    android:title="Doanh thu"/>
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Người dùng">
+            <menu>
+                <item android:id="@+id/nav_DoiMatKhau"
+                    android:icon="@drawable/password"
+                    android:title="Đổi mật khẩu"/>
+                <item android:id="@+id/nav_DangXuat"
+                    android:icon="@drawable/logout"
+                    android:title="Đăng xuất"/>
+            </menu>
+        </item>
+    </group>
+</menu>
