@@ -4,8 +4,16 @@ public class ThuThu {
     private String maTT;
     private String hoTen;
     private String matKhau;
+    private int loaitaikhoan;
 
     public ThuThu() {
+    }
+
+    public ThuThu(String maTT, String hoTen, String matKhau, int loaitaikhoan) {
+        this.maTT = maTT;
+        this.hoTen = hoTen;
+        this.matKhau = matKhau;
+        this.loaitaikhoan = loaitaikhoan;
     }
 
     public ThuThu(String maTT, String hoTen, String matKhau) {
@@ -37,4 +45,14 @@ public class ThuThu {
     public void setMatKhau(String matKhau) {
         this.matKhau = matKhau;
     }
+
+    public int getLoaitaikhoan() {
+        return loaitaikhoan;
+    }
+
+    public void setLoaitaikhoan(int loaitaikhoan) {
+        this.loaitaikhoan = loaitaikhoan;
+    }
 }
+
+

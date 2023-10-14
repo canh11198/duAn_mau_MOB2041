@@ -11,10 +11,10 @@
         android:title="Quản lý loại sách"/>
     <item android:id="@+id/nav_Sach"
         android:icon="@drawable/book_icon"
-        android:title="Quản lý loại sách"/>
+        android:title="Quản lý  sách"/>
     <item android:id="@+id/nav_ThanhVien"
         android:icon="@drawable/audience"
-        android:title="Quản lý loại sách"/>
+        android:title="Quản lý thành viên"/>
     <group android:checkableBehavior="single">
         <item android:title="Thống kê">
             <menu>

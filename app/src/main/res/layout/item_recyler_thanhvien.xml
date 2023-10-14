@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#ADF45A"
+        android:background="#89C5F4"
         android:padding="10dp"
         >
         <TextView
@@ -37,14 +37,14 @@
             android:layout_marginTop="10dp"
             >
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/edit"
                 android:id="@+id/ivedit"
                 />
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/delete"
                 android:layout_marginLeft="20dp"
                 android:id="@+id/ivdelete"

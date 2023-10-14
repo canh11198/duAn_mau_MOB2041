@@ -11,6 +11,15 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:src="@drawable/rpassword" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Đổi mật Khẩu"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FF5722"/>
 
     <EditText
         android:id="@+id/edtPassOld"

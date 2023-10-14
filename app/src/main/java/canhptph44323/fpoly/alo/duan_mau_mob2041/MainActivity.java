@@ -31,16 +31,17 @@ import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.LoaiSach_Fragment;
 import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.PhieuMuon_Fragment;
 import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.Sach_Fragment;
 import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.ThanhVien_Fragment;
+import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.Them_ThanhVien_Fragment;
 import canhptph44323.fpoly.alo.duan_mau_mob2041.Fragment.ThongKe_Fragment;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       androidx.appcompat.widget.Toolbar toolBar = findViewById(R.id.toolbar);
+        androidx.appcompat.widget.Toolbar toolBar = findViewById(R.id.toolbar);
         FrameLayout framelayout = findViewById(R.id.frameLayout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -71,16 +72,18 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if (id == R.id.nav_DoiMatKhau) {
                     showDialogDoiMK();
-                }else if (id == R.id.nav_TopMuon) {
+                } else if (id == R.id.nav_TopMuon) {
                     replaceFragment(new ThongKe_Fragment());
-                }else if (id == R.id.nav_DoanhThu) {
+                } else if (id == R.id.nav_DoanhThu) {
                     replaceFragment(new DoanhThu_Fragment());
-                }else if (id == R.id.nav_ThanhVien) {
+                } else if (id == R.id.nav_ThanhVien) {
                     replaceFragment(new ThanhVien_Fragment());
-                }else if (id == R.id.nav_Sach) {
+                } else if (id == R.id.nav_Sach) {
                     replaceFragment(new Sach_Fragment());
+                } else if (id == R.id.nav_ThemThanhVien){
+                    replaceFragment(new Them_ThanhVien_Fragment());
                 }
-                drawerLayout.closeDrawer(GravityCompat.START);
+                    drawerLayout.closeDrawer(GravityCompat.START);
                 toolBar.setTitle(item.getTitle());
 
                 return true;
@@ -88,19 +91,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Hiển thị chức năng cho ADMIN
-        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",MODE_PRIVATE);
-        String loaiTK = sharedPreferences.getString("loaitaikhoan","");
-        if (!loaiTK.equals("ADMIN")){
+        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
+        String loaiTK = sharedPreferences.getString("loaitaikhoan", "");
+        if (!loaiTK.equals("ADMIN")) {
             Menu menu = navigationView.getMenu();
             menu.findItem(R.id.nav_ThemThanhVien).setVisible(false);
 
         }
 
-        String hoten = sharedPreferences.getString("hoTen","");
-        tvTennguoidung.setText("WELCOM \n "+hoten);
+        String hoten = sharedPreferences.getString("hoTen", "");
+        tvTennguoidung.setText("WELCOM \n " + hoten);
 
     }
-
 
 
     @Override

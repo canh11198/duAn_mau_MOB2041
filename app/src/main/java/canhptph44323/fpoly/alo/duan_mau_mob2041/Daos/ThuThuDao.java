@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import canhptph44323.fpoly.alo.duan_mau_mob2041.Database.DbHelper;
+import canhptph44323.fpoly.alo.duan_mau_mob2041.model.ThuThu;
 
 public class ThuThuDao {
     DbHelper dbhelper;
@@ -50,4 +51,31 @@ public class ThuThuDao {
         }
         return 0;
     }
+
+    public boolean insert(ThuThu thuThu) {
+//        String sqlSearch = "SELECT * FROM ThuThu WHERE hoten = '" + userName + "'";
+//        Cursor cursor = dbhelper.getData(sqlSearch);
+//        if (cursor.getCount() == 0) {
+//            String sql = "INSERT INTO ThuThu(hoten, matkhau, loaitaikhoan) VALUES('" + userName + "', '" + password + "', 0)";
+//            dbhelper.queryData(sql);
+//            return 1;
+//        } else {
+//            return 0;
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("hoTen",thuThu.getHoTen());
+        contentValues.put("matkhau",thuThu.getMatKhau());
+        contentValues.put("maTT",thuThu.getMaTT());
+        contentValues.put("loaitaikhoan",thuThu.getLoaitaikhoan());
+
+        long check = sqLiteDatabase.insert("ThuThu",null,contentValues);
+        if (check == -1){
+            return false;
+        }else {
+            return true;
+        }
+
+
+        }
+
 }

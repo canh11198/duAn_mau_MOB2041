@@ -1,6 +1,7 @@
 package canhptph44323.fpoly.alo.duan_mau_mob2041.Database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -15,7 +16,7 @@ public class DbHelper extends SQLiteOpenHelper {
             "CREATE TABLE ThuThu(maTT TEXT PRIMARY KEY," +
                     "hoten TEXT NOT NULL," +
                     "matkhau TEXT NOT NULL," +
-                    "loaitaikhoan TEXT)";
+                    "loaitaikhoan INTEGER)";
 
 
     static final String CREATE_TABLE_THANH_VIEN =
@@ -69,19 +70,29 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO PhieuMuon VALUES (1,'thuthu_123',1,1,2500,'15/10/2023', 1),(2,'thuthu2',2,2,3000,'29/10/2023',0),(3,'thuthu3',3,7,2000,'22/09/2023',1)");
     }
 
+    public void queryData(String sql) {// truy van khong tra ve du lieu
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL(sql);
+    }
+
+    public Cursor getData(String sql) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        return sqLiteDatabase.rawQuery(sql, null);
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String dropTableLoaiThuThu = "drop table if exists ThuThu";
-        db. execSQL (dropTableLoaiThuThu);
+        db.execSQL(dropTableLoaiThuThu);
         String dropTableThanhVien = "drop table if exists ThanhVien";
-        db. execSQL (dropTableThanhVien);
+        db.execSQL(dropTableThanhVien);
         String dropTableLoaiSach = "drop table if exists LoaiSach";
-        db. execSQL(dropTableLoaiSach) ;
+        db.execSQL(dropTableLoaiSach);
         String dropTableSach = "drop table if exists Sach";
-        db. execSQL (dropTableSach);
+        db.execSQL(dropTableSach);
         String dropTablePhieuMuon = "drop table if exists PhieuMuon";
-        db. execSQL (dropTablePhieuMuon) ;
+        db.execSQL(dropTablePhieuMuon);
 
-        onCreate (db);
+        onCreate(db);
     }
 }
