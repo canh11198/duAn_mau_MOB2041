@@ -26,6 +26,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/edtNamXuatBan"
+        android:textColorHint="@color/black"
+        android:hint="Nhâp nam xban sách"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/edttien"
         android:textColorHint="@color/black"
         android:hint="Nhâp giá tiền"

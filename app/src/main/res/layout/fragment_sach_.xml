@@ -3,12 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     tools:context=".Fragment.Sach_Fragment">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_sach"
+            app:iconifiedByDefault="false"
+            app:queryHint="Tìm kiếm ...."/>
+   
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tăng dần "
+            android:id="@+id/btnTang"
+            android:layout_marginTop="50dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="giam dần "
+        android:id="@+id/btnGiam"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"/>
+
+
+   
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
         android:id="@+id/recyclerSach"
         />
 

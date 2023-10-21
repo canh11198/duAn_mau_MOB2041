@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/baseline_search_24"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:title="Tìm kiếm"/>
+    <item
+        android:id="@+id/asc"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_asc"
+        android:title="Tăng dần"/>
+    <item
+        android:id="@+id/desc"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_desc"
+        android:title="Giảm dần"/>
+</menu>

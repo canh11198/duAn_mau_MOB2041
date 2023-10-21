@@ -58,6 +58,7 @@ public class Sach_Adapter  extends RecyclerView.Adapter<Sach_Adapter.ViewHolder>
         holder.txtgiathue.setText(String.valueOf(list.get(position).getGiaThue()));
         holder.txtmaloai.setText(String.valueOf(list.get(position).getMaLoai()));
         holder.txttenloai.setText(list.get(position).getTenloai());
+        holder.txtNamXuatBan.setText(String.valueOf(list.get(position).getNamXuatBan()));
 
         holder.imgedit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +97,7 @@ public class Sach_Adapter  extends RecyclerView.Adapter<Sach_Adapter.ViewHolder>
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtmasach, txttensach, txtgiathue, txtmaloai, txttenloai;
+        TextView txtmasach, txttensach, txtgiathue, txtmaloai, txttenloai,txtNamXuatBan;
         ImageView imgdelete, imgedit;
 
         public ViewHolder(@NonNull View itemView) {
@@ -106,6 +107,7 @@ public class Sach_Adapter  extends RecyclerView.Adapter<Sach_Adapter.ViewHolder>
             txtgiathue = itemView.findViewById(R.id.txtgiathue);
             txtmaloai = itemView.findViewById(R.id.txtmaLoai);
             txttenloai = itemView.findViewById(R.id.txtTenLoai);
+            txtNamXuatBan=itemView.findViewById(R.id.txtNamXuatBan);
 
             imgdelete = itemView.findViewById(R.id.imgDelete);
             imgedit = itemView.findViewById(R.id.imgedit);
@@ -121,12 +123,15 @@ public class Sach_Adapter  extends RecyclerView.Adapter<Sach_Adapter.ViewHolder>
 
         EditText edttsach = view.findViewById(R.id.edttsach);
         EditText edttien = view.findViewById(R.id.edtien);
+        EditText edtNamXuatBan = view.findViewById(R.id.edtNamXuatBan);
+
         TextView txtmasach = view.findViewById(R.id.txtmaSach);
         Spinner spnLoaiSach = view.findViewById(R.id.spnLoaiSach);
 
         txtmasach.setText("Mã sách:"+ sach.getMaSach());
         edttsach.setText(sach.getTenSach());
         edttien.setText(String.valueOf(sach.getGiaThue()));
+        edtNamXuatBan.setText(String.valueOf(sach.getNamXuatBan()));
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(
                 context,
@@ -151,9 +156,10 @@ public class Sach_Adapter  extends RecyclerView.Adapter<Sach_Adapter.ViewHolder>
             public void onClick(DialogInterface dialogInterface, int i) {
                 String tensach = edttsach.getText().toString();
                 int tien = Integer.parseInt(edttien.getText().toString());
+                int namXuatBan= Integer.parseInt(edtNamXuatBan.getText().toString());
                 HashMap<String,Object> hs = (HashMap<String, Object>) spnLoaiSach.getSelectedItem();
                 int maloai = (int) hs.get("maLoai");
-                boolean check = sachDAO.capnhatThongTinSach(sach.getMaSach(),tensach,tien,maloai);
+                boolean check = sachDAO.capnhatThongTinSach(sach.getMaSach(),tensach,tien,maloai,namXuatBan);
                 if (check){
                     Toast.makeText(context, "Thêm thành công", Toast.LENGTH_SHORT).show();
                     //load data

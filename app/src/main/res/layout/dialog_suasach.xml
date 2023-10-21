@@ -36,6 +36,13 @@
         android:textColorHint="@color/black"
         android:hint="Nhâp giá tiền"
         />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtNamXuatBan"
+        android:textColorHint="@color/black"
+        android:hint="Nhâp nam Xuat Ban"
+        />
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

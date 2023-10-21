@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class DbHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "thu_vien";
-    private static final int DB_VERSION = 3;
+    private static final int DB_VERSION = 4;
 
     static final String CREATE_TABLE_THU_THU =
             "CREATE TABLE ThuThu(maTT TEXT PRIMARY KEY," +
@@ -34,7 +34,8 @@ public class DbHelper extends SQLiteOpenHelper {
                     "maSach INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "tenSach TEXT NOT NULL, " +
                     "giaThue INTEGER NOT NULL, " +
-                    "maLoai INTEGER REFERENCES LoaiSach (maLoai))";
+                    "maLoai INTEGER REFERENCES LoaiSach (maLoai)," +
+                    "NAM_XUAT_BAN INTEGER NOT NULL)";
 
     static final String CREATE_TABLE_PHIEU_MUON =
             "create table PhieuMuon (" +
@@ -64,7 +65,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_PHIEU_MUON);
 
         db.execSQL("INSERT INTO LoaiSach VALUES (1,'Android'),(2,'JAVAt'),(3,'PHP')");
-        db.execSQL("INSERT INTO Sach VALUES (1,'JAVASCRIP 1',1000,1),(2,'JAVA',5000,1),(3,'PHP cơ bản',2000,1)");
+        db.execSQL("INSERT INTO Sach VALUES (1,'JAVASCRIP 1',1000,1,2000),(2,'JAVA',5000,1,2001),(3,'PHP cơ bản',2000,1,2002)");
         db.execSQL("INSERT INTO ThanhVien VALUES (1,'Phạm Tân Cảnh','1999'),(2,'Trần ngọc hải','2004'),(3,'Ngô xuân bắc','2004')");
         db.execSQL("INSERT INTO ThuThu VALUES ('admin','ADMIN Phạm Tân Cảnh','admin','ADMIN'),('thuthu_123','Nguyễn văn nhật','12345','ThuThu')");
         db.execSQL("INSERT INTO PhieuMuon VALUES (1,'thuthu_123',1,1,2500,'15/10/2023', 1),(2,'thuthu2',2,2,3000,'29/10/2023',0),(3,'thuthu3',3,7,2000,'22/09/2023',1)");

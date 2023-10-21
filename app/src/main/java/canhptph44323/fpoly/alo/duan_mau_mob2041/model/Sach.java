@@ -3,6 +3,9 @@ package canhptph44323.fpoly.alo.duan_mau_mob2041.model;
 public class Sach {
     private int maSach;
     private String tenSach;
+
+    private int namXuatBan;
+
     private int giaThue;
     private int maLoai;
 
@@ -16,12 +19,23 @@ public class Sach {
         this.soLuongDaMuon = soLuongDaMuon;
     }
 
-    public Sach(int maSach, String tenSach, int giaThue, int maLoai, String tenloai) {
+
+
+    public Sach(int maSach, String tenSach, int giaThue, int maLoai, String tenloai, int namXuatBan) {
         this.maSach = maSach;
         this.tenSach = tenSach;
         this.giaThue = giaThue;
         this.maLoai = maLoai;
         this.tenloai = tenloai;
+        this.namXuatBan=namXuatBan;
+    }
+
+    public int getNamXuatBan() {
+        return namXuatBan;
+    }
+
+    public void setNamXuatBan(int namXuatBan) {
+        this.namXuatBan = namXuatBan;
     }
 
     public String getTenloai() {
